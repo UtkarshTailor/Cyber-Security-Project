@@ -1,4 +1,4 @@
-# Penetration Testing & Vulnerability Testing
+# Penetration Testing & Vulnerability Assessment
 
 ### Team Members
 
